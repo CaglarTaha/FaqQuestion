@@ -1,8 +1,14 @@
 
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  
+  const [button,setbuttonpls] = useState(false)
+  
   return (
+
+    
     <div className="App">
       <div className='Container'>
         <div className='Card'>
@@ -57,7 +63,9 @@ function App() {
             <div className='card-item-Contaier'>
             <div className='Row'>
             <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
+            <button className='buttonplus' onClick={ () => setbuttonpls(!button)}>
+              {button ? "+" : "-" }
+            </button>
             </div>
             </div>
             
