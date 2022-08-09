@@ -1,11 +1,15 @@
 
 import { useState } from 'react';
+import { isCompositeComponent } from 'react-dom/test-utils';
 import './App.css';
-
+import SimpleQuestion from './question';
+import dataQ from './Data.json'
 function App() {
   
-  const [button,setbuttonpls] = useState(false)
   
+  const [data,setdata] = useState(dataQ)
+
+  console.log(data.length)
   return (
 
     
@@ -16,63 +20,16 @@ function App() {
             <h3 className='Tittle'>Question And Answer (Faq)</h3>
           </div>
           <div className='right'>
+{dataQ.map((datas) => { 
 
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
-            </div>
-            </div>
+  return(
 
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
-            </div>
-            </div>
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
-            </div>
-            </div>
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
-            </div>
-            </div>
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
-            </div>
-            </div>
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
-            </div>
-            </div>
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus'>+</button>
-            </div>
-            </div>
-            <div className='card-item-Contaier'>
-            <div className='Row'>
-            <p className='list-item'> Do I have to allow the use of cookies ? </p>
-            <button className='buttonplus' onClick={ () => setbuttonpls(!button)}>
-              {button ? "+" : "-" }
-            </button>
-            </div>
-            </div>
+    <SimpleQuestion key={datas.id} {...datas} datas={datas} ></SimpleQuestion>
+   
+  )
+
+})}
             
-
-
-
-
           </div>
         </div>
       </div>

@@ -1,0 +1,43 @@
+ [
+
+{
+    "id":"1",
+    "question":"What is your Software Skilss",
+    "info":"React,css,html"
+},
+
+{
+    "id":"2",
+    "info":"React,css,html",
+    "question":"What is your Software Skilss"
+    
+},
+
+{
+    "id":"3",
+    "info":"React,css,html",
+    "question":"What is your Software Skilss"
+    
+},
+
+{
+    "id":"4",
+    "info":"React,css,html",
+    "question":"What is your Software Skilss"
+    
+},
+
+{
+    "id":"5",
+    "info":"React,css,html",
+    "question":"What is your Software Skilss"
+    
+},
+{
+    "id":"6",
+    "info":"React,css,html",
+    "question":"What is your Software Skilss"
+    
+}
+
+]
